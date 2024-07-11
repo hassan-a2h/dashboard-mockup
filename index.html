@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Dashboard</title>
+</head>
+<body>
+  <div class="w-full h-screen">
+    <!-- For topbar -->
+    <div class="flex align-center justify-between gap-5 w-full h-16 bg-black text-white px-12 py-2"> 
+      <div class="flex items-center justify-between gap-20 w-3/4">  <!-- Topbar logo and search field-->
+        <div class="text-3xl text-white">
+          <i class="fab fa-font-awesome-flag"></i>
+        </div>
+        <div class="relative w-full">
+          <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            <i class="fa-solid fa-magnifying-glass text-gray-600"></i>
+          </div>
+          <input type="text" placeholder="Search for clients, vehicles and more" class="block w-full pl-10 pr-3 py-2 rounded-full bg-black border border-gray-700 focus:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:border-transparent text-gray-300 placeholder-gray-600" />
+        </div>
+        <button class="bg-purple-700 hover:bg-purple-600 focus:bg-purple-600 text-white font-bold py-2 px-4 rounded-full">
+          <i class="fa-solid fa-plus text-white"></i>
+        </button>
+      </div>
+
+      <div class="flex justify-between items-center p-4 text-white w-1/4">
+        <!-- for left white bar -->
+        <div class="h-6 w-1 border-l border-white"></div>
+        <!-- Section 1: Notifications and Calendar icons -->
+        <div class="flex items-center space-x-4 gap-5">
+          <div class="text-gray-400 hover:text-white cursor-pointer">
+            <i class="far fa-bell fa-lg"></i>
+          </div>
+          <div class="text-gray-400 hover:text-white cursor-pointer">
+            <i class="far fa-calendar-alt fa-lg"></i>
+          </div>
+        </div>
+      
+        <!-- Section 2: User info card/button -->
+        <div class="flex items-center space-x-4">
+          <div class="bg-gray-700 rounded-full w-10 h-10 overflow-hidden">
+            <img src="./assets/admin.png" alt="Profile Picture" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <p class="font-medium">John Doe</p>
+            <p class="text-gray-400 text-sm">Admin</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- For main content -->
+<div class="flex w-full dashboard-height bg-slate-100"> 
+  <!-- Left sidebar -->
+  <div class="text-white w-16 py-6 px-3">
+    <!-- Sidebar content goes here -->
+    <ul>
+      <li class="mb-4">
+        <a href="#" class="flex items-center space-x-2 hover:text-gray-300">
+          <i class="fas fa-home"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li class="mb-4">
+        <a href="#" class="flex items-center space-x-2 hover:text-gray-300">
+          <i class="fas fa-chart-line"></i>
+          <span>Analytics</span>
+        </a>
+      </li>
+      <li class="mb-4">
+        <a href="#" class="flex items-center space-x-2 hover:text-gray-300">
+          <i class="fas fa-cog"></i>
+          <span>Settings</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Main dashboard content -->
+  <div class="flex-grow bg-gray-900 text-white p-8">
+    <!-- Dashboard content goes here -->
+    <h2 class="text-2xl font-bold mb-4">Welcome to the Dashboard</h2>
+    <p>This is where you can manage your business operations.</p>
+  </div>
+</div>
+  </div>
+</body>
+</html>
